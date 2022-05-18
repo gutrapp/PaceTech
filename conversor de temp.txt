@@ -1,0 +1,23 @@
+algoritmo "convertor de temperatura"
+
+var
+temperatura, resultado : real
+
+inicio
+Escreval("Qual sua temperatura")
+leia(temperatura)
+resultado <- (temperatura - 32) * 0.55555555555
+
+Escreval("Sua temperatura e de ", resultado:1:2,"°C")
+
+se resultado <= 15 entao
+   Escreval("Esta Frio")
+senao
+   se resultado <= 28 entao
+      Escreval("Esta agradavel")
+   senao
+      Escreval("Esta muito quente")
+   fimse
+fimse
+
+fimalgoritmo
