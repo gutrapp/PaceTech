@@ -1,0 +1,29 @@
+Quando o multiplicador do x for 1 voce deve escrever desse jeito: +1x
+Exemplos:
+-1x, +1x, +1xS, -1xS
+
++x -10 = +10
+Nao ira funcionar
+
+-1x 
+Ira funcionar
+
+Todo numero deve possuir um sinal
+Exemplos:
++10, -9, -10
+
+-4x + 10 = -9 + 2x
+Nao ira funcionar
+
+-4x +10 = -9 +2x
+Ira funcionar
+
+Para fazer equacoes de segundo grau so adicionar "S" do lado do x
+Exemplos:
++3xS, -2xS, +10000xS
+
++3x**2 = +10
+Nao ira funcionar
+
++3xS 
+Ira funcionar
