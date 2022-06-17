@@ -1,0 +1,59 @@
+algoritmo "semnome"
+
+
+var
+opcaoMenu, sinal : literal
+valor : real
+inicio
+
+repita
+
+   escreval("1 - Convertor de Temperaturas")
+   escreval("2 - Convertor de Moedas")
+   escreval("3 - Sair")
+   leia(opcaoMenu)
+   limpatela
+
+   se opcaoMenu = "1" entao
+      repita
+         escreval("1 - Converter de Fahrenheit para Celsius")
+         escreval("2 - Converter de Celsius para Fahrenheit")
+         escreval("3 - Sair")
+         leia(opcaoMenu)
+         limpatela
+
+         escreval("Informe sua temperatura")
+         leia(valor)
+         se opcaoMenu = "1" entao
+            valor <- (valor - 32) * 0.55555555555
+            sinal <- "°C"
+         senao
+            valor <- (valor * 1.8) + 32
+            sinal <- "°F"
+         fimse
+         escreval("Sua temperatura e de ", valor, sinal)
+      ate opcaoMenu = "3"
+   senao
+      repita
+         escreval("1 - Converter de Dolar para Real")
+         escreval("2 - Converter de Real para Dolar")
+         escreval("3 - Sair")
+         leia(opcaoMenu)
+         limpatela
+
+         escreval("Informe seu dinheiro")
+         leia(valor)
+         se opcaoMenu = "1" entao
+            valor <- valor / 5.20
+            sinal <- "R$"
+         senao
+            valor <- valor * 5.20
+            sinal <- "U$"
+         fimse
+         escreval("Sua dinheiro e de ", sinal, valor)
+      ate opcaoMenu = "3"
+   fimse
+
+ate opcaoMenu = "3"
+
+fimalgoritmo

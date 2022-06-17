@@ -1,0 +1,48 @@
+#QUANDO FOR TESTAR
+#USAR TESTAR NO PYTHON
+
+
+def separator(grades):
+    temp_grades = list()
+    current = 0
+    while len(grades) > current:
+        if grades[current] == " ":
+            current += 1
+        else:
+            temp_grades.append(int(grades[current]))
+            current += 1
+            if current == len(grades):
+                break
+            elif grades[current] == "0":
+                temp_grades.pop(-1)
+                temp_grades.append(10)
+                current += 1
+    return temp_grades
+
+
+def average_grade(grades):
+    approved = False
+    variable = ""
+    sum = 0
+    average = 0
+    if len(grades) == 1:
+        average = grades[0]
+    else:
+        for i in grades:
+            sum += i
+        average = sum / len(grades)
+    if average >= 7:
+        approved = True
+        variable = "aprovado"
+    else:
+        approved = False
+        variable = 'reprovado'
+    result = f"Sua media foi {average} voce foi {variable}"
+    return result
+
+
+notas = list(separator(input("Quais sao suas notas(separar notas com um espaco): ")))
+print(notas)
+print(average_grade(notas))
+
+

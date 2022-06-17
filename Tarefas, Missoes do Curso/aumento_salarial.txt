@@ -1,0 +1,12 @@
+algoritmo "Tarefa Semana 3"
+
+var
+salario, aumento: real
+
+inicio
+Escreval("Digite seu salario: ")
+leia(salario)
+aumento <- salario * 1.3
+Escreval("Seu novo salario sera de: ")
+
+fimalgoritmo

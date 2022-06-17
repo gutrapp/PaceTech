@@ -1,0 +1,81 @@
+package Aula;
+
+import java.util.Scanner;
+
+public class Principal {
+
+    public static void main(String[] args) {
+        
+        char option;
+        float conversionRate;
+        double temperature;
+        float money;
+        Scanner l = new Scanner(System.in);
+        
+        System.out.print("Informe a cotacao do Dolar de hoje: ");
+        conversionRate = l.nextFloat();
+        
+        while(true) {
+            System.out.println("Oque deseja fazer: ");
+            System.out.println("1 - Converter temperaturas");
+            System.out.println("2 - Converter moedas");
+            System.out.println("3 - Sair");
+            option = l.nextLine().charAt(0);
+            
+            if(option == '1') {
+                System.out.println("1 - Converter Celsius para Fahrenheit");
+                System.out.println("2 - Converter Fahrenheit para Celsius");
+                System.out.println("3 - Voltar para o menu");
+                option = l.nextLine().charAt(0);
+                if(option == '1') {
+                    System.out.println("Informe sua temperatura: ");
+                    temperature = (l.nextInt() * 1.8) + 32;
+                    System.out.println("Sua temperatura e de " + 
+                            temperature + "°F");
+                } else {
+                    System.out.println("Informe sua temperatura: ");
+                    temperature = (l.nextInt() - 32) * 0.55555555555;
+                    System.out.println("Sua temperatura e de " + 
+                            temperature + "°C");
+                }
+                System.out.println("Deseja continuar convertendo?(s/n)");
+                option = l.nextLine().charAt(0);
+                if(option == 's') {
+                    option = '1';
+                }else {
+                    option = '0';
+                }
+            } else if(option == '2'){
+                System.out.println("1 - Converter Dolar para Real");
+                System.out.println("2 - Converter Real para Dolar");
+                System.out.println("3 - Voltar para o menu");
+                option = l.nextLine().charAt(0);
+                if(option == '1') {
+                    System.out.println("Informe seu dinheiro: ");
+                    money = l.nextInt() * conversionRate;
+                    System.out.println("Sua dinheiro e de " + 
+                            money + "R$");
+                } else {
+                    System.out.println("Informe seu dinheiro: ");
+                    money = l.nextInt() / conversionRate;
+                    System.out.println("Sua dinheiro e de " + 
+                            money + "U$");
+                }
+                System.out.println("Deseja continuar convertendo?(s/n)");
+                option = l.nextLine().charAt(0);
+                if(option == 's') {
+                    option = '1';
+                }else {
+                    option = '0';
+                }
+            } else if(option == '3') {
+                break;
+            } else {
+                System.out.println("Escolha invalida");
+            }
+            
+        }
+
+    }
+    
+}
